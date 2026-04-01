@@ -63,7 +63,6 @@ export default function SelfCheck() {
   };
 
   const result = getResult();
-  const progress = ((current + 1) / questions.length) * 100;
   const allAnswered = Object.keys(answers).length === questions.length;
 
   return (
