@@ -32,7 +32,7 @@ const clinics: Clinic[] = [
     actionLabel: "Call 1323",
     actionHref: "tel:1323",
   },
-  
+
   {
     id: 1,
     category: "RSU",
@@ -222,7 +222,7 @@ export default function Clinics() {
     active === "All" ? clinics : clinics.filter((c) => c.category === active);
 
   return (
-    <section className="cl2-section" id="j">
+    <section className="cl2-section" id="clinics">
       <div className="cl2-container">
 
         {/* Header */}
