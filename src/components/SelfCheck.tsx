@@ -1,4 +1,10 @@
 import { useState } from "react";
+import { createClient } from "@supabase/supabase-js";
+
+const supabase = createClient(
+  "https://xioccqazpfcwdhbqrcml.supabase.co",
+  "sb_publishable_TZVtR6v_l5pzHjQBKQQG9g_jdrWNl-Z"  // paste your full key
+);
 
 interface Question {
   id: number;
@@ -20,6 +26,7 @@ export default function SelfCheck() {
   const [answers, setAnswers] = useState<Record<number, string>>({});
   const [submitted, setSubmitted] = useState(false);
   const [current, setCurrent] = useState(0);
+  const [saving, setSaving] = useState(false);
 
   const handleAnswer = (questionId: number, option: string) => {
     setAnswers((prev) => ({ ...prev, [questionId]: option }));
@@ -59,6 +66,21 @@ export default function SelfCheck() {
 
   const result = getResult();
   const allAnswered = Object.keys(answers).length === questions.length;
+
+  const handleSubmit = async () => {
+    setSaving(true);
+    try {
+      await supabase.from("selfcheck_results").insert({
+        yes_count: yesCount,
+        result_label: result.label,
+      });
+    } catch (err) {
+      console.error("Failed to save result:", err);
+    } finally {
+      setSaving(false);
+      setSubmitted(true);
+    }
+  };
 
   return (
     <section className="sc-section" id="selfcheck">
@@ -130,10 +152,10 @@ export default function SelfCheck() {
               ) : (
                 <button
                   className="sc-btn-next"
-                  onClick={() => setSubmitted(true)}
-                  disabled={!allAnswered}
+                  onClick={handleSubmit}
+                  disabled={!allAnswered || saving}
                 >
-                  See Results
+                  {saving ? "Saving..." : "See Results"}
                 </button>
               )}
             </div>
