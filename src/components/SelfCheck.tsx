@@ -61,7 +61,7 @@ export default function SelfCheck() {
   const allAnswered = Object.keys(answers).length === questions.length;
 
   return (
-    <section className="sc-section" id="check">
+    <section className="sc-section" id="selfcheck">
       <div className="sc-header">
         <span className="sc-badge">SELF-CHECK</span>
         <h2 className="sc-heading">How are you really doing?</h2>
