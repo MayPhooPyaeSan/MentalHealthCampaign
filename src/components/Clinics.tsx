@@ -20,6 +20,20 @@ interface Clinic {
 
 const clinics: Clinic[] = [
   {
+    id: 10,
+    category: "Government",
+    categoryLabel: "GOVERNMENT / FREE",
+    name: "Department of Mental Health Hotline (กรมสุขภาพจิต)",
+    location: "1323 — nationwide",
+    tags: ["Free counselling", "Crisis support", "Referral service"],
+    feeLabel: "COST",
+    fee: "Free",
+    available: "Available 24/7 in Thai",
+    actionLabel: "Call 1323",
+    actionHref: "tel:1323",
+  },
+  
+  {
     id: 1,
     category: "RSU",
     categoryLabel: "RSU CAMPUS",
@@ -134,19 +148,6 @@ const clinics: Clinic[] = [
     actionLabel: "Book",
     actionHref: "https://counsellingthailand.com",
   },
-  {
-    id: 10,
-    category: "Government",
-    categoryLabel: "GOVERNMENT / FREE",
-    name: "Department of Mental Health Hotline (กรมสุขภาพจิต)",
-    location: "1323 — nationwide",
-    tags: ["Free counselling", "Crisis support", "Referral service"],
-    feeLabel: "COST",
-    fee: "Free",
-    available: "Available 24/7 in Thai",
-    actionLabel: "Call 1323",
-    actionHref: "tel:1323",
-  },
 ];
 
 const categories: Category[] = ["All", "Government", "Private", "RSU"];
@@ -221,7 +222,7 @@ export default function Clinics() {
     active === "All" ? clinics : clinics.filter((c) => c.category === active);
 
   return (
-    <section className="cl2-section" id="clinics">
+    <section className="cl2-section" id="j">
       <div className="cl2-container">
 
         {/* Header */}

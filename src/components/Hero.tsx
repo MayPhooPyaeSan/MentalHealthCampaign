@@ -37,7 +37,7 @@ export default function Hero() {
               Find Help Near You
               <ArrowRight size={18} />
             </a>
-            <a href="#resources" className="btn-outline hero-btn-secondary" id="selfcheck">
+            <a href="#selfcheck" className="btn-outline hero-btn-secondary">
               <ClipboardCheck size={18} />
               Take a Self-Check
             </a>
