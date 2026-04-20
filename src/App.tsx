@@ -9,7 +9,7 @@ import MythsVsReality from "./components/Mythsvsreality";
 import Volunteers from "./components/Volunteers";
 import Crisis from "./components/Crisis";
 import Footer from "./components/Footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
@@ -26,6 +26,7 @@ function App() {
         <Crisis/>
         <Footer/>
       </main>
+      <Analytics />
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function Hero() {
             <span className="hero-heading-accent">
               <em>really okay?</em>
             </span>{" "}
-            in this.
+          
           </h1>
 
           {/* Subtext */}
