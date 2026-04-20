@@ -2,8 +2,8 @@ import { useState } from "react";
 import { createClient } from "@supabase/supabase-js";
 
 const supabase = createClient(
-  "https://xioccqazpfcwdhbqrcml.supabase.co",
-  "sb_publishable_TZVtR6v_l5pzHjQBKQQG9g_jdrWNl-Z"  // paste your full key
+  import.meta.env.VITE_SUPABASE_URL,
+  import.meta.env.VITE_SUPABASE_KEY
 );
 
 interface Question {
