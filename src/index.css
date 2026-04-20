@@ -1592,8 +1592,6 @@ body {
 
 /* ─── VOLUNTEERS ─────────────────────────── */
 
-/* ─── VOLUNTEERS ─────────────────────────── */
-
 .vol-section {
   background-color: #F7F4ED;
   padding: 6rem 1.5rem;
@@ -1784,6 +1782,7 @@ body {
     padding: 2rem 1.25rem;
   }
 }
+
 /* ─── CRISIS / EMERGENCY ─────────────────── */
 
 .cr-section {
