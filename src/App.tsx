@@ -9,6 +9,7 @@ import MythsVsReality from "./components/Mythsvsreality";
 import Volunteers from "./components/Volunteers";
 import Crisis from "./components/Crisis";
 import Footer from "./components/Footer";
+import { Analytics } from "@vercel/analytics/next"
 
 function App() {
   return (

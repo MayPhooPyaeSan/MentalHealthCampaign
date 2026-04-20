@@ -11,14 +11,14 @@ export default function Hero() {
           {/* Badge */}
           <div className="hero-badge">
             <span className="hero-badge-dot"></span>
-            RSU MENTAL HEALTH CAMPAIGN 2025
+            RSU MENTAL HEALTH CAMPAIGN 2026
           </div>
 
           {/* Heading */}
           <h1 className="hero-heading">
-            I'm{" "}
+            Are you{" "}
             <span className="hero-heading-accent">
-              <em>Fine</em>
+              <em>really okay?</em>
             </span>{" "}
             in this.
           </h1>
