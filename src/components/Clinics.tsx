@@ -20,20 +20,6 @@ interface Clinic {
 
 const clinics: Clinic[] = [
   {
-    id: 10,
-    category: "Government",
-    categoryLabel: "GOVERNMENT / FREE",
-    name: "Department of Mental Health Hotline (กรมสุขภาพจิต)",
-    location: "1323 — nationwide",
-    tags: ["Free counselling", "Crisis support", "Referral service"],
-    feeLabel: "COST",
-    fee: "Free",
-    available: "Available 24/7 in Thai",
-    actionLabel: "Call 1323",
-    actionHref: "tel:1323",
-  },
-
-  {
     id: 1,
     category: "RSU",
     categoryLabel: "RSU CAMPUS",
@@ -46,6 +32,19 @@ const clinics: Clinic[] = [
     actionLabel: "Directions",
     actionHref: "https://maps.google.com/?q=Rangsit+University+Pathum+Thani",
     featured: true,
+  },
+    {
+    id: 10,
+    category: "Government",
+    categoryLabel: "GOVERNMENT / FREE",
+    name: "Department of Mental Health Hotline (กรมสุขภาพจิต)",
+    location: "1323 — nationwide",
+    tags: ["Free counselling", "Crisis support", "Referral service"],
+    feeLabel: "COST",
+    fee: "Free",
+    available: "Available 24/7 in Thai",
+    actionLabel: "Call 1323",
+    actionHref: "tel:1323",
   },
   {
     id: 2,
